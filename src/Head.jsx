@@ -10,9 +10,10 @@ export default function Head() {
         const updateTimeDate = () => {
             const date = new Date();
             const timeString = date.toLocaleTimeString();
+            const timeStringNoSeconds = timeString.slice(0, timeString.length - 6) + timeString.slice(-3);
             const dateString = date.toDateString();
 
-            setTime(timeString);
+            setTime(timeStringNoSeconds);
             setDate(dateString);
         }
 
@@ -22,7 +23,7 @@ export default function Head() {
 
     return (
         <div className="flex w-full bg-black text-white text-xl font-lexend font-normal p-5">
-            <p className="w-32">{time}</p>
+            <p className="w-28">{time}</p>
             <p className="text-amber-400">{weatherData?.temperature || "--"}</p>
             <p className="ml-auto">{date}</p>
         </div>
