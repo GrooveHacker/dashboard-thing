@@ -7,12 +7,12 @@ export default function WeatherForecast() {
     const { weatherData, setUpdateWeatherData, updateWeatherData } = useContext(Context);
 
     useEffect(() => {
-        const interval = setTimeout(() => {
+        /*const interval = setTimeout(() => {
             setScroll(scroll - 1);
-            setScrollStyle(`right-[${scroll - 1}px]`);
+            setScrollStyle(`translate-x-[${scroll + 1}px]`);
         }, 50);
 
-        return () => clearTimeout(interval);
+        return () => clearTimeout(interval);*/
     }, [scroll]);
 
     return (
