@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 @import "tailwindcss";
 
-body {
+html, body {
     margin: 0;
     padding: 0;
     background-image: radial-gradient(circle, #140043, #0f0238, #0d022c, #09011f, #020012);
