@@ -22,9 +22,9 @@ export default function Head() {
     }, []);
 
     return (
-        <div className="flex w-full bg-black text-white text-xl font-lexend font-normal p-5">
+        <div className="flex w-full bg-linear-to-t from-gray-900/60 to-gray-900/60 border-b border-b-gray-700/30 text-white text-xl font-lexend font-normal p-5">
             <p className="w-28">{time}</p>
-            <p className="text-amber-400">{weatherData?.temperature || "--"}</p>
+            <p className="text-lime-300">{weatherData?.temperature || "--"}</p>
             <p className="ml-auto">{date}</p>
         </div>
     )

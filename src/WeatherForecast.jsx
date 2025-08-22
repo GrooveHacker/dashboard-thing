@@ -35,7 +35,7 @@ export default function WeatherForecast() {
     }, [weatherData, updateWeather, setUpdateWeather]);
 
     return (
-        <div className="w-full font-lexend text-base text-white py-2 px-5 bg-cyan-500 overflow-hidden relative" ref={containerRef}>
+        <div className="w-full font-lexend text-base text-indigo-200/80 py-2 px-5 bg-gray-950/40 border-b border-b-gray-700/30 overflow-hidden relative shadow-lg" ref={containerRef}>
             <p className="whitespace-nowrap relative" ref={textRef}>{weatherData?.detailedForecast || "--"}</p>
         </div>
     )

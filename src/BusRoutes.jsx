@@ -45,11 +45,11 @@ export default function BusRoutes({ name, location, api }) {
     }, [update, api]);
 
     return (
-        <>
-            <div className="w-full font-lexend text-xl px-5 py-3 bg-gray-300"><span className="font-bold">{name}</span> @ {location}</div>
+        <div className="w-11/12 mx-auto rounded-3xl overflow-hidden mt-5 bg-linear-to-t from-amber-100/10 to-gray-950/40 border border-gray-700/30 shadow-lg">
+            <div className="w-full font-lexend text-xl px-5 py-3 text-indigo-200/60"><span className="font-bold text-white">{name}</span> @ {location}</div>
             {routes.map((route) => (
                 <BusRoute key={route.busNumber} data={route} />
             ))}
-        </>
+        </div>
     )
 }
