@@ -13,10 +13,12 @@ export default function BusRoutes({ name, location, api }) {
                 .map((entry) => {
                     const walk = entry.legs[0];
                     const route = entry.legs[1].routes[0];
+                    const departure = entry.legs[1].departures[0];
                     const itinerary = route.itineraries[0];
 
                     return {
-                        walkDuration: Math.ceil(walk.duration / 60),
+                        walkTime: Math.ceil(walk.duration / 60),
+                        departureTime: Math.floor((departure.departure_time - Date.now() / 1000) / 60),
                         busNumber: route.route_short_name,
                         busHeadsign: itinerary.merged_headsign,
                         busStopName: itinerary.stops[itinerary.plan_details.start_stop_offset].stop_name
